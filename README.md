@@ -1,19 +1,17 @@
 # DevOps CI/CD Docker Project
 
-This project demonstrates a CI/CD pipeline that automatically builds, tests, and deploys a containerized web application.
+This project creates a CI/CD pipeline that automatically builds, tests, and deploys a containerized web application.
 
 ---
 
 ## Overview
 
-When code is pushed to the `main` branch, the system:
+When code is pushed to the main branch, the system:
 
 - Builds a Docker image  
 - Tests the application automatically  
 - Publishes the image to GitHub Container Registry (GHCR)  
 - Deploys the new version to a Linux server  
-
-This simulates a real-world DevOps workflow where applications are updated automatically after each change.
 
 ---
 
