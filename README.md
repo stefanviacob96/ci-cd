@@ -103,9 +103,9 @@ http://localhost:5000
 ``` 
 ### Project Goals
 
-CI/CD pipeline design
-Automated Docker image builds
-Automated testing in pipelines
-Container registry integration
-Deployment to a Linux server
-Self-hosted GitHub Actions runners
+- CI/CD pipeline design
+- Automated Docker image builds
+- Automated testing in pipelines
+- Container registry integration
+- Deployment to a Linux server
+- Self-hosted GitHub Actions runners
