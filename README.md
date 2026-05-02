@@ -108,3 +108,4 @@ Automated testing in pipelines
 Container registry integration
 Deployment to a Linux server
 Self-hosted GitHub Actions runners
+EOF
