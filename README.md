@@ -99,11 +99,13 @@ docker run -p 5000:5000 devops-ci-app
 Open in browser:
 
 http://localhost:5000
-Project Goals
+
+``` 
+### Project Goals
+
 CI/CD pipeline design
 Automated Docker image builds
 Automated testing in pipelines
 Container registry integration
 Deployment to a Linux server
 Self-hosted GitHub Actions runners
-EOF
