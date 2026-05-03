@@ -1,4 +1,4 @@
-# DevOps CI/CD Docker Project
+# CI/CD Docker Project
 
 This project creates a CI/CD pipeline that automatically builds, tests, and deploys a containerized web application.
 
@@ -30,22 +30,17 @@ When code is pushed to the main branch, the system:
 ## How the System Works
 
 
-Developer pushes code to main
-│
-▼
-GitHub Actions builds and tests the app
-│
-▼
-Docker image is pushed to GHCR
-│
-▼
-Deployment process is triggered
-│
-▼
-Server pulls the new image
-│
-▼
-Docker Compose restarts the container
+ Developer pushes code to main
+->
+ GitHub Actions builds and tests the app
+->
+ Docker image is pushed to GHCR
+->
+ Deployment process is triggered
+->
+ Server pulls the new image
+->
+ Docker Compose restarts the container
 
 
 Result: the server runs the latest version of the application.
@@ -73,39 +68,29 @@ The deployment stage was tested using a Linux server (Multipass VM).
 
 - Docker  
 - Docker Compose  
-- Self-hosted GitHub Actions runner  
+- Self-hosted GitHub Actions runner
+
 
 ### Deployment process:
 
 ```bash
 docker compose pull
 docker compose up -d --force-recreate
+```
 
-This ensures the server always runs the latest version of the application.
+### Important Note
 
-Important Note
+- The server is not kept running permanently to avoid unnecessary resource usage.
+- The deployment process has been fully tested and can be reproduced at any time using the steps described above.
 
-The server is not kept running permanently to avoid unnecessary resource usage.
+## Run Locally
 
-The deployment process has been fully tested and can be reproduced at any time using the steps described above.
-
-Run Locally
-
-Build and run the application:
-
+#### Build and run the application:
+```bash
 docker build -t devops-ci-app .
 docker run -p 5000:5000 devops-ci-app
-
-Open in browser:
-
+```
+#### Open in browser:
+```bash
 http://localhost:5000
-
-``` 
-### Project Goals
-
-- CI/CD pipeline design
-- Automated Docker image builds
-- Automated testing in pipelines
-- Container registry integration
-- Deployment to a Linux server
-- Self-hosted GitHub Actions runners
+```
